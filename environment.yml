@@ -1,3 +1,6 @@
+#
+# Note: for tensorflow-text please check the base-notebook.ipynb
+#
 name: ml
 channels:
   - apple
