@@ -1,6 +1,13 @@
 
 ## Introduction
 
+
+### Creating conda environment:
+
+conda create -n "ml2" python=3.10 ipython
+
+Python 3.10 is neccesary due to library restrictions.
+
 ### Dependencies
 
 Install the dependencies mentioned in the requirements.txt using the following command
@@ -16,7 +23,22 @@ so_ml_tools can be updated seperatly by issueing the following command:
 python3 -m pip install -U so_ml_tools --no-deps
 
 
-### Setup
+### Setup Jupyterlab Templates
+
+Setting up the templates an be a bit finiky.
+
+Add config (https://github.com/finos/jupyterlab_templates) to ~/.jupyter/jupyter_server_config.py):
+c.JupyterLabTemplates.template_dirs = ['~/.jupyter/templates']
+
+Create templates directory.
+
+conda activate ml
+
+might be neccasary:
+
+pip3 install jupyterlab_templates if module not found.
+
+
 
 #### Kaggle
 
@@ -67,3 +89,9 @@ https://saturncloud.io/blog/understanding-memoryerror-in-tensorflow-and-successf
 Check the documentation on: https://www.tensorflow.org/install/pip#software_requirements
 
 This warning is not really an issue, TensorRT can speed up inference but is not mandatory.
+
+##### Error: No version of module jupyter-matplotlib is registered
+
+Install the correct widget in Jupyter lab:
+
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
