@@ -21,3 +21,6 @@ tensorflow-text==2.14.0
 jupyterlab==4.0.8
 jupyterlab_templates==0.5.0
 ipympl=0.9.3
+imbalanced-learn==0.11.0
+skfeature-chappers==1.1.0
+sweetviz==2.3.1
